@@ -1,4 +1,4 @@
-package com.testetecnico.ticket_1.testes_menu;
+package com.testetecnico.testes_menu;
 
 import com.testetecnico.ticket_1.Escudo;
 import com.testetecnico.ticket_1.Luzes;
