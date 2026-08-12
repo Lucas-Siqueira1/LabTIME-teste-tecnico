@@ -35,7 +35,7 @@ public class Main {
         System.out.println("-----------------------");
 
         while(executando) {
-            System.out.println("1 - Testar Sistema de Contingência do Núcleo da Nave");
+            System.out.println("\n1 - Testar Sistema de Contingência do Núcleo da Nave");
             System.out.println("2 - Testar Comportamento Dinâmico da Tripulação");
             System.out.println("0 - Sair");
 
