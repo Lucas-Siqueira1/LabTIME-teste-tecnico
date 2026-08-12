@@ -4,6 +4,7 @@ import com.testetecnico.ticket_1.Escudo;
 import com.testetecnico.ticket_1.Luzes;
 import com.testetecnico.ticket_1.Nucleo;
 import com.testetecnico.ticket_1.Painel;
+import com.testetecnico.ticket_1.enums.NivelEnergia;
 
 import java.util.Scanner;
 
@@ -23,7 +24,12 @@ public class SistemaEnergia {
 
             switch (opcao) {
                 case 1:
-                    if (nucleo.tomarDano() > 3) return;
+                    int contador = nucleo.tomarDano();
+                    if (contador == NivelEnergia.FATAL.getValor()) {
+                        System.out.println("\nA nave sofreu um dano fatal!");
+                        System.out.println("GAME OVER! A nave foi destruída.");
+                        System.exit(0);
+                    }
                     break;
                 case 2:
                     nucleo.repararNucleo();

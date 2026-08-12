@@ -1,8 +1,11 @@
 package com.testetecnico.ticket_1.enums;
 
 public enum NivelEnergia {
-    FATAL(4),
-    CRITICO(3);
+    INTACTA(0),
+    LEVE(1),
+    MODERADO(2),
+    CRITICO(3),
+    FATAL(4);
 
     private int valor;
 
