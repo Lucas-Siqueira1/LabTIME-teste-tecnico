@@ -1,8 +1,9 @@
-package com.testetecnico.ticket_1;
+package com.testetecnico.ticket_1.observers;
 
+import com.testetecnico.ticket_1.Observer;
 import com.testetecnico.ticket_1.enums.NivelEnergia;
 
-public class Painel implements Observer{
+public class Painel implements Observer {
     @Override
     public void notificate(int contagemDano) {
         if (contagemDano == NivelEnergia.CRITICO.getValor()) {

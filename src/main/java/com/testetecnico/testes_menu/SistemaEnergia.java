@@ -1,9 +1,9 @@
 package com.testetecnico.testes_menu;
 
-import com.testetecnico.ticket_1.Escudo;
-import com.testetecnico.ticket_1.Luzes;
+import com.testetecnico.ticket_1.observers.Escudo;
+import com.testetecnico.ticket_1.observers.Luzes;
 import com.testetecnico.ticket_1.Nucleo;
-import com.testetecnico.ticket_1.Painel;
+import com.testetecnico.ticket_1.observers.Painel;
 import com.testetecnico.ticket_1.enums.NivelEnergia;
 
 import java.util.Scanner;
