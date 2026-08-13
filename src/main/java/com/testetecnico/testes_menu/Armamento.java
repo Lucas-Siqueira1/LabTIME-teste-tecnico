@@ -8,6 +8,7 @@ public class Armamento {
     public void menuArmamento(Nave nave) {
         Scanner scanner = new Scanner(System.in);
         var opcoesArmamentos = new OpcoesArmamentos();
+        var opcoesModificacoes = new OpcoesModificacoes();
 
         while(true) {
 
@@ -15,6 +16,7 @@ public class Armamento {
             System.out.println("----------------------------------");
             System.out.println("1 - Selecionar armamento");
             System.out.println("2 - Efetuar disparo");
+            System.out.println("3 - Adicionar modificação");
             System.out.println("0 - Voltar");
 
             int opcao = scanner.nextInt();
@@ -25,6 +27,9 @@ public class Armamento {
                     break;
                 case 2:
                     nave.atirar();
+                    break;
+                case 3:
+                    opcoesModificacoes.menuModificacoes(nave);
                     break;
                 case 0:
                     return;
