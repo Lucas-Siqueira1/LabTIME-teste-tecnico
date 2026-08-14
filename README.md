@@ -6,7 +6,7 @@
 
 1. **Clone o repositório e acesse a pasta:**
    ```bash
-   git clone [https://github.com/Lucas-Siqueira1/LabTIME-teste-tecnico.git](https://github.com/Lucas-Siqueira1/LabTIME-teste-tecnico.git)
+   git clone https://github.com/Lucas-Siqueira1/LabTIME-teste-tecnico.git
    cd LabTIME-teste-tecnico
    ```
 
