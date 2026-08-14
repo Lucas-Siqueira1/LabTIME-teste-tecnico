@@ -9,8 +9,14 @@ import com.testetecnico.ticket_1.enums.NivelEnergia;
 import java.util.Scanner;
 
 public class SistemaEnergia {
+
+    private final Scanner scanner;
+
+    public SistemaEnergia(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
     public void menuNave(Nucleo nucleo, Escudo escudo, Luzes luzes, Painel painel) {
-        Scanner scanner = new Scanner(System.in);
 
         while(true) {
             System.out.println("\nSistema de Contingência do Núcleo da Nave");

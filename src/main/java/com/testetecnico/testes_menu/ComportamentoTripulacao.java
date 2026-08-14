@@ -5,9 +5,14 @@ import com.testetecnico.ticket_2.Tripulante;
 import java.util.Scanner;
 
 public class ComportamentoTripulacao {
+    private final Scanner scanner;
+
+    public ComportamentoTripulacao(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
     public void menuTripulantes(Tripulante tripulante) {
-        Scanner scanner = new Scanner(System.in);
-        var opcoesFuncoes = new OpcoesFuncoes();
+        var opcoesFuncoes = new OpcoesFuncoes(scanner);
 
         while(true) {
             System.out.println("\nSistema de Delegação de Funções");

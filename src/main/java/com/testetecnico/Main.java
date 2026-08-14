@@ -18,9 +18,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Boolean executando = true;
 
-        var sistemaEnergia = new SistemaEnergia();
-        var comportamentoTripulacao = new ComportamentoTripulacao();
-        var armamento = new Armamento();
+        var sistemaEnergia = new SistemaEnergia(scanner);
+        var comportamentoTripulacao = new ComportamentoTripulacao(scanner);
+        var armamento = new Armamento(scanner);
 
         var nucleo = new Nucleo();
         var painel = new Painel();

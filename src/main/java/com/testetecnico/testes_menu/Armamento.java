@@ -5,19 +5,24 @@ import com.testetecnico.ticket_3.Nave;
 import java.util.Scanner;
 
 public class Armamento {
+    private final Scanner scanner;
+
+    public Armamento(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
     public void menuArmamento(Nave nave) {
-        Scanner scanner = new Scanner(System.in);
-        var opcoesArmamentos = new OpcoesArmamentos();
-        var opcoesModificacoes = new OpcoesModificacoes();
+        var opcoesArmamentos = new OpcoesArmamentos(scanner);
+        var opcoesModificacoes = new OpcoesModificacoes(scanner);
 
         while(true) {
 
-            System.out.println("Gerenciamento de armamento");
+            System.out.println("\nGerenciamento de armamento");
             System.out.println("----------------------------------");
             System.out.println("1 - Selecionar armamento");
             System.out.println("2 - Efetuar disparo");
             System.out.println("3 - Adicionar modificação");
-            System.out.println("0 - Voltar");
+            System.out.println("0 - Voltar\n");
 
             int opcao = scanner.nextInt();
 

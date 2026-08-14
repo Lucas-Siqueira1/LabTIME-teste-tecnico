@@ -8,9 +8,13 @@ import com.testetecnico.ticket_2.funcoes.FuncaoPiloto;
 import java.util.Scanner;
 
 public class OpcoesFuncoes {
-    public void menuOpcoesFuncoes(Tripulante tripulante) {
-        Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner;
 
+    public OpcoesFuncoes(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
+    public void menuOpcoesFuncoes(Tripulante tripulante) {
         var piloto = new FuncaoPiloto();
         var mecanico = new FuncaoMecanico();
         var operadorCanhoes = new FuncaoOperadorCanhoes();
