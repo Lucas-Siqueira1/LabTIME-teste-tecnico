@@ -13,7 +13,34 @@ import com.testetecnico.ticket_3.Nave;
 
 import java.util.Scanner;
 
+/**
+ * Classe de entrada da aplicação, responsável por montar o cenário
+ * inicial (núcleo, observadores, tripulante e nave) e exibir o menu
+ * principal para testar os três sistemas do projeto:
+ * <ul>
+ *     <li>Sistema de contingência do núcleo ({@link SistemaEnergia})</li>
+ *     <li>Comportamento dinâmico da tripulação ({@link ComportamentoTripulacao})</li>
+ *     <li>Armamento modular e modificadores ({@link Armamento})</li>
+ * </ul>
+ */
 public class Main {
+
+    /**
+     * Ponto de entrada da aplicação.
+     * <p>
+     * Monta o cenário inicial:
+     * <ul>
+     *     <li>Cria o {@link Nucleo} e registra {@link Painel}, {@link Escudo}
+     *     e {@link Luzes} como seus observadores</li>
+     *     <li>Cria um {@link Tripulante} inicial ("Lucas") com a função de
+     *     {@link FuncaoPiloto}</li>
+     *     <li>Cria uma {@link Nave} sem armamento equipado</li>
+     * </ul>
+     * Em seguida, exibe o menu principal em loop até que o usuário escolha
+     * sair (opção 0), delegando cada opção ao menu correspondente.
+     *
+     * @param args argumentos de linha de comando (não utilizados)
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Boolean executando = true;
@@ -48,7 +75,7 @@ public class Main {
 
             switch (opcao) {
                 case 1:
-                    sistemaEnergia.menuNave(nucleo, escudo, luzes, painel);
+                    sistemaEnergia.menuNave(nucleo);
                     break;
                 case 2:
                     comportamentoTripulacao.menuTripulantes(tripulante1);

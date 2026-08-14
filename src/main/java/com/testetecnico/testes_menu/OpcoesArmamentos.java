@@ -7,13 +7,41 @@ import com.testetecnico.ticket_3.armas.Missil;
 
 import java.util.Scanner;
 
+/**
+ * Menu de console responsável por permitir a troca de armamento
+ * de uma {@link Nave}.
+ * <p>
+ * Utiliza o mesmo {@link Scanner} recebido para ler a opção
+ * escolhida pelo usuário.
+ */
 public class OpcoesArmamentos {
     private final Scanner scanner;
 
+    /**
+     * Cria o menu de opções de armamento.
+     *
+     * @param scanner scanner usado para ler as opções digitadas pelo usuário
+     */
     public OpcoesArmamentos(Scanner scanner) {
         this.scanner = scanner;
     }
 
+    /**
+     * Exibe o menu de escolha de armamento para a nave informada.
+     * <p>
+     * Opções disponíveis:
+     * <ul>
+     *     <li>1 - Equipa {@link CanhaoDePlasma} e encerra o menu</li>
+     *     <li>2 - Equipa {@link LaserContinuo} e encerra o menu</li>
+     *     <li>3 - Equipa {@link Missil} e encerra o menu</li>
+     *     <li>0 - Encerra o menu sem trocar de arma</li>
+     * </ul>
+     * Diferente de escolher uma arma ou voltar, uma opção inválida
+     * não encerra o menu: a mensagem de erro é exibida e as opções
+     * são reapresentadas.
+     *
+     * @param nave nave que terá seu armamento trocado via {@link Nave#trocarArma}
+     */
     public void menuOpcoesArmamentos(Nave nave) {
         var canhaoDePlasma = new CanhaoDePlasma();
         var laserContinuo = new LaserContinuo();

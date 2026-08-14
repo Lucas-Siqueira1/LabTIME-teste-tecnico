@@ -8,15 +8,44 @@ import com.testetecnico.ticket_1.enums.NivelEnergia;
 
 import java.util.Scanner;
 
+/**
+ * Menu de console responsável pelo sistema de contingência do
+ * núcleo de energia da nave: aplicar dano, reparar e verificar
+ * o nível de energia atual.
+ * <p>
+ * Utiliza o mesmo {@link Scanner} recebido para ler a opção
+ * escolhida pelo usuário.
+ */
 public class SistemaEnergia {
 
     private final Scanner scanner;
 
+    /**
+     * Cria o menu do sistema de energia.
+     *
+     * @param scanner scanner usado para ler as opções digitadas pelo usuário
+     */
     public SistemaEnergia(Scanner scanner) {
         this.scanner = scanner;
     }
 
-    public void menuNave(Nucleo nucleo, Escudo escudo, Luzes luzes, Painel painel) {
+    /**
+     * Exibe o menu de contingência do núcleo informado.
+     * <p>
+     * Opções disponíveis:
+     * <ul>
+     *     <li>1 - Aplica dano via {@link Nucleo#tomarDano()}. Se o dano
+     *     resultante atingir {@link NivelEnergia#FATAL}, a aplicação é
+     *     encerrada imediatamente com {@link System#exit(int)}, sem
+     *     retornar ao chamador</li>
+     *     <li>2 - Repara o núcleo via {@link Nucleo#repararNucleo()}</li>
+     *     <li>3 - Exibe o nível de energia atual via {@link Nucleo#nivelEnergia()}</li>
+     *     <li>0 - Encerra o menu e retorna ao chamador</li>
+     * </ul>
+     *
+     * @param nucleo núcleo de energia da nave a ser gerenciado
+     */
+    public void menuNave(Nucleo nucleo) {
 
         while(true) {
             System.out.println("\nSistema de Contingência do Núcleo da Nave");
