@@ -11,10 +11,6 @@ public class OpcoesModificacoes {
     public void menuModificacoes(Nave nave) {
         Scanner scanner = new Scanner(System.in);
 
-        var danoFogo = new DanoFogo(nave.getArmaAtual());
-        var disparoMultiplo = new DisparoMultiplo(nave.getArmaAtual());
-        var perfuracaoBlindagem = new PerfuracaoBlindagem(nave.getArmaAtual());
-
         while(true) {
             System.out.println("Escolha qual modificação deseja adicionar a sua arma");
             System.out.println("------------------------------------------------------------------");
@@ -27,15 +23,15 @@ public class OpcoesModificacoes {
 
             switch (opcao) {
                 case 1:
-                    nave.adicionarModificacao(danoFogo);
+                    nave.adicionarModificacao(new DanoFogo(nave.getArmaAtual()));
                     System.out.println("Modificação adicionada com sucesso!\n");
                     break;
                 case 2:
-                    nave.adicionarModificacao(perfuracaoBlindagem);
+                    nave.adicionarModificacao(new PerfuracaoBlindagem(nave.getArmaAtual()));
                     System.out.println("Modificação adicionada com sucesso!\n");
                     break;
                 case 3:
-                    nave.adicionarModificacao(disparoMultiplo);
+                    nave.adicionarModificacao(new DisparoMultiplo(nave.getArmaAtual()));
                     System.out.println("Modificação adicionada com sucesso!\n");
                     break;
                 case 0:
